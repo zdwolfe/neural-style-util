@@ -7,6 +7,15 @@ sudo echo "Done.."
 
 echo "Installing dependencies."
 
+mkdir ~/libjpeg
+cd ~/libjpeg
+wget http://www.ijg.org/files/jpegsrc.v8d.tar.gz
+tar -xvf jpegsrc.v8d.tar.gz
+cd jpeg-8d/ 
+sudo ./configure
+sudo make
+sudo make install
+
 curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
 git clone https://github.com/torch/distro.git ~/torch --recursive
 cd ~/torch; ./install.sh
