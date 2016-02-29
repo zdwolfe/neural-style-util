@@ -32,13 +32,9 @@ cd ~/neural-style
 echo "Downloading VGG models."
 sh models/download_models.sh
 
-#echo "Downloading style and content images."
-#wget https://upload.wikimedia.org/wikipedia/en/c/cc/The_Hallucinogenic_Toreador.png
-#wget http://i.imgur.com/INeMA1K.png
+echo "Setting up directory structure."
+mkdir -p ~/content
+mkdir -p ~/styles
 
-#echo "Running image processing job."
-#th neural_style.lua -style_image The_Hallucinogenic_Toreador.png  -content_image INeMA1K.png
-
-
-echo "Done."
+echo "Finished."
 
